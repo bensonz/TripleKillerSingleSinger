@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D0AFB39C-1CCF-4E82-AC09-E28AAF49E608</string>
+	<string>2ED113AF-4552-4203-982D-A350BAFCBF94</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Pulp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/bensonz/TripleKillerSingleSinger.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Pulp.xcodeproj</string>
+	<string>Pulp.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>598679B3EAE2A585B771AF2B70FAE119C8D9F43B</key>
-		<string>../..</string>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/bensonz/TripleKillerSingleSinger.git</string>
