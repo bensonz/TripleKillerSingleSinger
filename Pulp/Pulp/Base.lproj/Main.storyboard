@@ -61,7 +61,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomSV" destination="aSj-HT-VX7" id="3bE-wo-bQG"/>
+                        <outlet property="currentMsgSV" destination="nmF-Sr-jDr" id="8Vf-7v-e6E"/>
                         <outlet property="mainSV" destination="OyR-oR-N2b" id="Xvm-W4-x62"/>
+                        <outlet property="middleSV" destination="cOx-c9-Q1H" id="hkG-3H-51H"/>
+                        <outlet property="secondBottomSV" destination="vWU-fV-7Lk" id="Di5-ph-oop"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

@@ -11,6 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var mainSV: UIScrollView!
+    @IBOutlet weak var bottomSV: UIScrollView!
+    @IBOutlet weak var secondBottomSV: UIScrollView!
+    @IBOutlet weak var middleSV: UIScrollView!
+    @IBOutlet weak var currentMsgSV: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
