@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		224D75D419D6789B009E7C3C /* ArchivedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D75D319D6789B009E7C3C /* ArchivedCell.swift */; };
+		224D75D719D67F37009E7C3C /* singleMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D75D619D67F37009E7C3C /* singleMail.swift */; };
+		224D75D919D6808C009E7C3C /* CurrentMsgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D75D819D6808C009E7C3C /* CurrentMsgCell.swift */; };
+		224D75DB19D680B2009E7C3C /* UnreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D75DA19D680B2009E7C3C /* UnreadCell.swift */; };
+		224D75DD19D680CC009E7C3C /* SavedMsgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224D75DC19D680CC009E7C3C /* SavedMsgCell.swift */; };
 		A9B4CD3619D60BEA006954EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4CD3519D60BEA006954EB /* AppDelegate.swift */; };
 		A9B4CD3819D60BEA006954EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B4CD3719D60BEA006954EB /* ViewController.swift */; };
 		A9B4CD3B19D60BEA006954EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9B4CD3919D60BEA006954EB /* Main.storyboard */; };
@@ -26,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		224D75D319D6789B009E7C3C /* ArchivedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchivedCell.swift; sourceTree = "<group>"; };
+		224D75D619D67F37009E7C3C /* singleMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleMail.swift; sourceTree = "<group>"; };
+		224D75D819D6808C009E7C3C /* CurrentMsgCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMsgCell.swift; sourceTree = "<group>"; };
+		224D75DA19D680B2009E7C3C /* UnreadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnreadCell.swift; sourceTree = "<group>"; };
+		224D75DC19D680CC009E7C3C /* SavedMsgCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedMsgCell.swift; sourceTree = "<group>"; };
 		A9B4CD3019D60BEA006954EB /* Pulp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B4CD3419D60BEA006954EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9B4CD3519D60BEA006954EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +66,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		224D75D219D6786E009E7C3C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				224D75D319D6789B009E7C3C /* ArchivedCell.swift */,
+				224D75D819D6808C009E7C3C /* CurrentMsgCell.swift */,
+				224D75DA19D680B2009E7C3C /* UnreadCell.swift */,
+				224D75DC19D680CC009E7C3C /* SavedMsgCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		224D75D519D67F21009E7C3C /* Mail */ = {
+			isa = PBXGroup;
+			children = (
+				224D75D619D67F37009E7C3C /* singleMail.swift */,
+			);
+			name = Mail;
+			sourceTree = "<group>";
+		};
 		A9B4CD2719D60BEA006954EB = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +106,8 @@
 		A9B4CD3219D60BEA006954EB /* Pulp */ = {
 			isa = PBXGroup;
 			children = (
+				224D75D519D67F21009E7C3C /* Mail */,
+				224D75D219D6786E009E7C3C /* Cell */,
 				A9B4CD3519D60BEA006954EB /* AppDelegate.swift */,
 				A9B4CD3719D60BEA006954EB /* ViewController.swift */,
 				A9B4CD3919D60BEA006954EB /* Main.storyboard */,
@@ -212,8 +243,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224D75DB19D680B2009E7C3C /* UnreadCell.swift in Sources */,
+				224D75D719D67F37009E7C3C /* singleMail.swift in Sources */,
 				A9B4CD3819D60BEA006954EB /* ViewController.swift in Sources */,
+				224D75D919D6808C009E7C3C /* CurrentMsgCell.swift in Sources */,
+				224D75DD19D680CC009E7C3C /* SavedMsgCell.swift in Sources */,
 				A9B4CD3619D60BEA006954EB /* AppDelegate.swift in Sources */,
+				224D75D419D6789B009E7C3C /* ArchivedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +443,7 @@
 				A9B4CD5119D60BEA006954EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9B4CD5219D60BEA006954EB /* Build configuration list for PBXNativeTarget "PulpTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +452,7 @@
 				A9B4CD5419D60BEA006954EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
