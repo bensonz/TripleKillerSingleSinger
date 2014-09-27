@@ -14,6 +14,7 @@
 		2271CF2D19D769C400D47CDB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2271CF2B19D769C400D47CDB /* LaunchScreen.xib */; };
 		2271CF3919D769C400D47CDB /* PulpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271CF3819D769C400D47CDB /* PulpTests.swift */; };
 		2271CF4419D76A9400D47CDB /* SavedMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */; };
+		2274AA5319D775B500AEB124 /* singleMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274AA5219D775B500AEB124 /* singleMail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		2271CF3719D769C400D47CDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2271CF3819D769C400D47CDB /* PulpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulpTests.swift; sourceTree = "<group>"; };
 		2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedMailViewController.swift; sourceTree = "<group>"; };
+		2274AA5219D775B500AEB124 /* singleMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleMail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		2271CF1F19D769C400D47CDB /* Pulp */ = {
 			isa = PBXGroup;
 			children = (
+				2274AA5219D775B500AEB124 /* singleMail.swift */,
 				2271CF4219D76A7E00D47CDB /* viewControllers */,
 				2271CF2219D769C400D47CDB /* AppDelegate.swift */,
 				2271CF2619D769C400D47CDB /* Main.storyboard */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2274AA5319D775B500AEB124 /* singleMail.swift in Sources */,
 				2271CF2519D769C400D47CDB /* InboxViewController.swift in Sources */,
 				2271CF4419D76A9400D47CDB /* SavedMailViewController.swift in Sources */,
 				2271CF2319D769C400D47CDB /* AppDelegate.swift in Sources */,
@@ -417,6 +421,7 @@
 				2271CF3E19D769C400D47CDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2271CF3F19D769C400D47CDB /* Build configuration list for PBXNativeTarget "PulpTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				2271CF4119D769C400D47CDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

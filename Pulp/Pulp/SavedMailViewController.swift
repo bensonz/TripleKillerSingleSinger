@@ -10,6 +10,10 @@ import UIKit
 
 class SavedMailViewController : UIViewController{
     
+    @IBOutlet weak var saveMainSV: UIScrollView!
+    
+    var mails : [singleMail]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
