@@ -36,15 +36,14 @@ class InboxViewController: UIViewController {
         mainSV.layer.borderWidth = 0.5
         mainSV.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 0.5, 0.5, 0.2])
         
+        bottomSV.layer.borderWidth = 0.3
+        bottomSV.backgroundColor = UIColor.whiteColor()
 
-        bottomSV.layer.borderWidth = 0.7
-        bottomSV.backgroundColor = UIColorFromRGB(0x994D52,alp:1.0)
-
-        sBottomSV.layer.borderWidth = 0.7
-        sBottomSV.backgroundColor = UIColorFromRGB(0x031634,alp:1.0)
+        sBottomSV.layer.borderWidth = 0.3
+        sBottomSV.backgroundColor = UIColor.whiteColor()
     
-        curSV.layer.borderWidth = 0.7
-        curSV.backgroundColor = UIColorFromRGB(0xD9742B, alp: 1.0)
+        curSV.layer.borderWidth = 0.3
+        curSV.backgroundColor = UIColor.whiteColor()
         
         curMsg.numberOfLines = mails![0].countLines()
         curMsg.text = mails![0].allContentInStringFormat()
@@ -96,6 +95,7 @@ class InboxViewController: UIViewController {
         }
         for var i = 0; i < 10; ++i {
             var ccc = ["hello","my friends","yall look great","i have a dream","help me",
+                "help urself","be cool","pce out","making it long","wut","guess","haha","just long","jsut mad long","i done caring","hell yeah","hello","my friends","yall look great","i have a dream","help me",
                 "help urself","be cool","pce out","making it long","wut","guess","haha","just long","jsut mad long","i done caring","hell yeah"]
             self.mails!.append(singleMail(title: String(i), sender: String(i) + "@apple.com", reciever: "me", content: ccc, time: String(i)))
         }

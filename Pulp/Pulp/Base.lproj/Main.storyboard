@@ -76,18 +76,24 @@
                                             <constraint firstAttribute="height" constant="78" id="0As-YQ-yG7"/>
                                         </constraints>
                                     </scrollView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="em6-p5-0aS" userLabel="curSV">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="em6-p5-0aS" userLabel="curSV">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="382"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt6-dV-akQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="tt6-dV-akQ" secondAttribute="bottom" id="Emf-Mm-h6I"/>
                                             <constraint firstAttribute="height" constant="382" id="YhQ-SO-r6H"/>
+                                            <constraint firstAttribute="trailing" secondItem="tt6-dV-akQ" secondAttribute="trailing" id="aJS-le-k55"/>
+                                            <constraint firstItem="tt6-dV-akQ" firstAttribute="leading" secondItem="em6-p5-0aS" secondAttribute="leading" id="cgt-pj-MJb"/>
+                                            <constraint firstItem="tt6-dV-akQ" firstAttribute="top" secondItem="em6-p5-0aS" secondAttribute="top" id="g68-oP-P16"/>
                                         </constraints>
                                     </scrollView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt6-dV-akQ">
-                                        <rect key="frame" x="8" y="8" width="552" height="365"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="em6-p5-0aS" firstAttribute="trailing" secondItem="tVM-Wd-3BW" secondAttribute="trailing" id="4bb-Sr-uAB"/>
