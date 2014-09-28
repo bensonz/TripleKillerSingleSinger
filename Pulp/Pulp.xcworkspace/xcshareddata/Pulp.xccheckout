@@ -5,16 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>7B633554-0E7A-4308-8AAF-0C6A6C2BCB9C</string>
+	<string>17B57E7B-3BEB-4229-9661-79DFFF8AF769</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pulp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>598679B3EAE2A585B771AF2B70FAE119C8D9F43B</key>
 		<string>https://github.com/bensonz/TripleKillerSingleSinger.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Pulp/Pulp.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>598679B3EAE2A585B771AF2B70FAE119C8D9F43B</key>
-		<string>Pulp</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/bensonz/TripleKillerSingleSinger.git</string>
