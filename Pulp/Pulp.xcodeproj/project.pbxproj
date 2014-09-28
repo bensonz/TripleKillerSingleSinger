@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2252D7A719D8A13F001BD59D /* PassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2252D7A619D8A13F001BD59D /* PassCell.swift */; };
+		2252D7AA19D8A2A0001BD59D /* 1@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2252D7A819D8A2A0001BD59D /* 1@2x.jpg */; };
+		2252D7AB19D8A2A0001BD59D /* 3@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2252D7A919D8A2A0001BD59D /* 3@2x.jpg */; };
+		2252D7AD19D8ABAA001BD59D /* PBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2252D7AC19D8ABAA001BD59D /* PBCell.xib */; };
+		226D43BC19D81BE100850A69 /* 2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 226D43BB19D81BE100850A69 /* 2@2x.jpg */; };
+		226D43BF19D81C6400850A69 /* customPBLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226D43BE19D81C6400850A69 /* customPBLayout.swift */; };
 		2271CF2319D769C400D47CDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271CF2219D769C400D47CDB /* AppDelegate.swift */; };
 		2271CF2519D769C400D47CDB /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271CF2419D769C400D47CDB /* InboxViewController.swift */; };
 		2271CF2819D769C400D47CDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2271CF2619D769C400D47CDB /* Main.storyboard */; };
@@ -15,7 +21,6 @@
 		2271CF3919D769C400D47CDB /* PulpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271CF3819D769C400D47CDB /* PulpTests.swift */; };
 		2271CF4419D76A9400D47CDB /* SavedMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */; };
 		2274AA5319D775B500AEB124 /* singleMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274AA5219D775B500AEB124 /* singleMail.swift */; };
-		A90854DB19D7D78800087FFC /* scrollViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90854DA19D7D78800087FFC /* scrollViewClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2252D7A619D8A13F001BD59D /* PassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassCell.swift; sourceTree = "<group>"; };
+		2252D7A819D8A2A0001BD59D /* 1@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1@2x.jpg"; sourceTree = SOURCE_ROOT; };
+		2252D7A919D8A2A0001BD59D /* 3@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3@2x.jpg"; sourceTree = SOURCE_ROOT; };
+		2252D7AC19D8ABAA001BD59D /* PBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBCell.xib; sourceTree = SOURCE_ROOT; };
+		226D43BB19D81BE100850A69 /* 2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2@2x.jpg"; sourceTree = SOURCE_ROOT; };
+		226D43BE19D81C6400850A69 /* customPBLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customPBLayout.swift; sourceTree = "<group>"; };
 		2271CF1D19D769C400D47CDB /* Pulp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2271CF2119D769C400D47CDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2271CF2219D769C400D47CDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +52,6 @@
 		2271CF3819D769C400D47CDB /* PulpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulpTests.swift; sourceTree = "<group>"; };
 		2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedMailViewController.swift; sourceTree = "<group>"; };
 		2274AA5219D775B500AEB124 /* singleMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleMail.swift; sourceTree = "<group>"; };
-		A90854DA19D7D78800087FFC /* scrollViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = scrollViewClass.swift; path = ../../../../../../Downloads/Pulp/Pulp/scrollViewClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		226D43BD19D81C5200850A69 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				226D43BE19D81C6400850A69 /* customPBLayout.swift */,
+				2252D7A619D8A13F001BD59D /* PassCell.swift */,
+				2252D7AC19D8ABAA001BD59D /* PBCell.xib */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
 		2271CF1419D769C400D47CDB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +103,10 @@
 		2271CF1F19D769C400D47CDB /* Pulp */ = {
 			isa = PBXGroup;
 			children = (
+				226D43BD19D81C5200850A69 /* Layout */,
+				2252D7A819D8A2A0001BD59D /* 1@2x.jpg */,
+				226D43BB19D81BE100850A69 /* 2@2x.jpg */,
+				2252D7A919D8A2A0001BD59D /* 3@2x.jpg */,
 				2274AA5219D775B500AEB124 /* singleMail.swift */,
 				2271CF4219D76A7E00D47CDB /* viewControllers */,
 				2271CF2219D769C400D47CDB /* AppDelegate.swift */,
@@ -122,7 +146,6 @@
 		2271CF4219D76A7E00D47CDB /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A90854DA19D7D78800087FFC /* scrollViewClass.swift */,
 				2271CF2419D769C400D47CDB /* InboxViewController.swift */,
 				2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */,
 			);
@@ -210,8 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2271CF2819D769C400D47CDB /* Main.storyboard in Resources */,
+				2252D7AD19D8ABAA001BD59D /* PBCell.xib in Resources */,
 				2271CF2D19D769C400D47CDB /* LaunchScreen.xib in Resources */,
+				2252D7AB19D8A2A0001BD59D /* 3@2x.jpg in Resources */,
+				2252D7AA19D8A2A0001BD59D /* 1@2x.jpg in Resources */,
 				2271CF2A19D769C400D47CDB /* Images.xcassets in Resources */,
+				226D43BC19D81BE100850A69 /* 2@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2274AA5319D775B500AEB124 /* singleMail.swift in Sources */,
-				A90854DB19D7D78800087FFC /* scrollViewClass.swift in Sources */,
+				226D43BF19D81C6400850A69 /* customPBLayout.swift in Sources */,
+				2252D7A719D8A13F001BD59D /* PassCell.swift in Sources */,
 				2271CF2519D769C400D47CDB /* InboxViewController.swift in Sources */,
 				2271CF4419D76A9400D47CDB /* SavedMailViewController.swift in Sources */,
 				2271CF2319D769C400D47CDB /* AppDelegate.swift in Sources */,
