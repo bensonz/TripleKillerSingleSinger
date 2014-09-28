@@ -21,6 +21,10 @@
 		2271CF3919D769C400D47CDB /* PulpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271CF3819D769C400D47CDB /* PulpTests.swift */; };
 		2271CF4419D76A9400D47CDB /* SavedMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */; };
 		2274AA5319D775B500AEB124 /* singleMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274AA5219D775B500AEB124 /* singleMail.swift */; };
+		3D588CF319D8D57A009F68A2 /* MailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D588CF219D8D57A009F68A2 /* MailCellView.swift */; };
+		3D588CF819D8D5F7009F68A2 /* FuturaStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D588CF519D8D59B009F68A2 /* FuturaStd-Book.otf */; };
+		3D588CF919D8D5F9009F68A2 /* FuturaStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D588CF419D8D59B009F68A2 /* FuturaStd-Bold.otf */; };
+		3D588CFA19D8D5FB009F68A2 /* Sabon-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D588CF619D8D59B009F68A2 /* Sabon-Roman.ttf */; };
 		4D54B8B332972699BE6E20A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CE0E0981807D6FDC7A77F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,10 @@
 		2271CF3819D769C400D47CDB /* PulpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulpTests.swift; sourceTree = "<group>"; };
 		2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedMailViewController.swift; sourceTree = "<group>"; };
 		2274AA5219D775B500AEB124 /* singleMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleMail.swift; sourceTree = "<group>"; };
+		3D588CF219D8D57A009F68A2 /* MailCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailCellView.swift; sourceTree = "<group>"; };
+		3D588CF419D8D59B009F68A2 /* FuturaStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Bold.otf"; sourceTree = "<group>"; };
+		3D588CF519D8D59B009F68A2 /* FuturaStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Book.otf"; sourceTree = "<group>"; };
+		3D588CF619D8D59B009F68A2 /* Sabon-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sabon-Roman.ttf"; sourceTree = "<group>"; };
 		77BFEF5C7C103775B61D0F81 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CF8CE0E0981807D6FDC7A77F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56E489785654AAECAD7E747 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +98,7 @@
 		2271CF1419D769C400D47CDB = {
 			isa = PBXGroup;
 			children = (
+				3D588CF119D8D527009F68A2 /* MailCell */,
 				2271CF1F19D769C400D47CDB /* Pulp */,
 				2271CF3519D769C400D47CDB /* PulpTests */,
 				2271CF1E19D769C400D47CDB /* Products */,
@@ -128,6 +137,7 @@
 		2271CF2019D769C400D47CDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3D588CF719D8D5AB009F68A2 /* Fonts */,
 				2271CF2119D769C400D47CDB /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -158,6 +168,25 @@
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
+		};
+		3D588CF119D8D527009F68A2 /* MailCell */ = {
+			isa = PBXGroup;
+			children = (
+				3D588CF219D8D57A009F68A2 /* MailCellView.swift */,
+			);
+			name = MailCell;
+			sourceTree = "<group>";
+		};
+		3D588CF719D8D5AB009F68A2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3D588CF519D8D59B009F68A2 /* FuturaStd-Book.otf */,
+				3D588CF419D8D59B009F68A2 /* FuturaStd-Bold.otf */,
+				3D588CF619D8D59B009F68A2 /* Sabon-Roman.ttf */,
+			);
+			name = Fonts;
+			path = PulpTests;
+			sourceTree = SOURCE_ROOT;
 		};
 		8400EB6A2696B1FFA49F38AB /* Pods */ = {
 			isa = PBXGroup;
@@ -260,10 +289,13 @@
 			files = (
 				2271CF2819D769C400D47CDB /* Main.storyboard in Resources */,
 				2252D7AD19D8ABAA001BD59D /* PBCell.xib in Resources */,
+				3D588CF919D8D5F9009F68A2 /* FuturaStd-Bold.otf in Resources */,
 				2271CF2D19D769C400D47CDB /* LaunchScreen.xib in Resources */,
+				3D588CF819D8D5F7009F68A2 /* FuturaStd-Book.otf in Resources */,
 				2252D7AB19D8A2A0001BD59D /* 3@2x.jpg in Resources */,
 				2252D7AA19D8A2A0001BD59D /* 1@2x.jpg in Resources */,
 				2271CF2A19D769C400D47CDB /* Images.xcassets in Resources */,
+				3D588CFA19D8D5FB009F68A2 /* Sabon-Roman.ttf in Resources */,
 				226D43BC19D81BE100850A69 /* 2@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +353,7 @@
 				2271CF2519D769C400D47CDB /* InboxViewController.swift in Sources */,
 				2271CF4419D76A9400D47CDB /* SavedMailViewController.swift in Sources */,
 				2271CF2319D769C400D47CDB /* AppDelegate.swift in Sources */,
+				3D588CF319D8D57A009F68A2 /* MailCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

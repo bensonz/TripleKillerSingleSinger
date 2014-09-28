@@ -34,5 +34,11 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FuturaStd-Bold.otf</string>
+		<string>FuturaStd-Book.otf</string>
+		<string>Sabon-Roman.ttf</string>
+	</array>
 </dict>
 </plist>
