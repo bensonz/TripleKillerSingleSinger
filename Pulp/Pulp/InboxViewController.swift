@@ -25,9 +25,7 @@ class InboxViewController: UIViewController, UIScrollViewDelegate {
     
     
     //initalize delegate
-    var sc_delegate = scrollViewClass()
-    
-    
+    //var sc_delegate = scrollViewClass()
     
     
     override func viewDidLoad() {
@@ -53,10 +51,11 @@ class InboxViewController: UIViewController, UIScrollViewDelegate {
         //        curMsg.text = mails![0].allContentInStringFormat()
         //
         //code for scrolling
+        /*
         self.curSV.delegate = sc_delegate
         sc_delegate.scrollViews.append(bottomSV)
         sc_delegate.scrollViews.append(sBottomSV)
-        
+        */
         //we have to make scroll view size bigger than displayed size
         curSV.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height + 100)
         

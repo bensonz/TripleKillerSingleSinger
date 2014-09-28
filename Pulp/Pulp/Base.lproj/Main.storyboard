@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5xz-Ne-em5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5xz-Ne-em5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -26,28 +26,26 @@
         <scene sceneID="pwZ-eR-CJY">
             <objects>
                 <viewController id="KA9-0d-HBY" customClass="SavedMailViewController" customModule="Pulp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jYI-9t-tcG"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pcm-OZ-KwN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="C9c-jz-EQ3">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="B2X-W8-TkO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0i1-TQ-aT1">
-                                <rect key="frame" x="16" y="72" width="568" height="520"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xgl-Rl-lTh" customClass="customPBLayout" customModule="Pulp" customModuleProvider="target">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="KA9-0d-HBY" id="Q2t-G6-8D2"/>
+                            <outlet property="delegate" destination="KA9-0d-HBY" id="uUQ-1W-NWH"/>
+                        </connections>
+                    </collectionView>
                     <navigationItem key="navigationItem" title="Saved mails" id="fc1-XF-gZo"/>
-                    <connections>
-                        <outlet property="saveMainSV" destination="0i1-TQ-aT1" id="fWs-76-x3A"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OmF-lG-cAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="227" y="881"/>
+            <point key="canvasLocation" x="142" y="881"/>
         </scene>
         <!--Inbox-->
         <scene sceneID="Fnd-io-Jtu">
@@ -61,49 +59,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kHr-Nq-fdT">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHr-Nq-fdT">
                                 <rect key="frame" x="16" y="64" width="568" height="536"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tVM-Wd-3BW" userLabel="bSV">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVM-Wd-3BW" userLabel="bSV">
                                         <rect key="frame" x="0.0" y="458" width="568" height="78"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFk-nT-clL">
-                                                <rect key="frame" x="229" y="28" width="111" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFk-nT-clL">
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="78" id="BCF-Tm-5N4"/>
+                                            <constraint firstAttribute="bottom" secondItem="uFk-nT-clL" secondAttribute="bottom" id="0rP-jN-fAf"/>
+                                            <constraint firstItem="uFk-nT-clL" firstAttribute="top" secondItem="tVM-Wd-3BW" secondAttribute="top" id="Irb-t5-l6A"/>
+                                            <constraint firstAttribute="trailing" secondItem="uFk-nT-clL" secondAttribute="trailing" id="XZx-1z-siP"/>
+                                            <constraint firstItem="uFk-nT-clL" firstAttribute="leading" secondItem="tVM-Wd-3BW" secondAttribute="leading" id="rMR-v5-97b"/>
                                         </constraints>
                                     </scrollView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lx5-qY-Smk" userLabel="sbSV">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lx5-qY-Smk" userLabel="sbSV">
                                         <rect key="frame" x="0.0" y="381" width="568" height="78"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeT-bs-d7o">
-                                                <rect key="frame" x="229" y="28" width="111" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeT-bs-d7o">
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="78" id="0As-YQ-yG7"/>
+                                            <constraint firstItem="QeT-bs-d7o" firstAttribute="leading" secondItem="lx5-qY-Smk" secondAttribute="leading" id="B1W-Tt-mXG"/>
+                                            <constraint firstAttribute="trailing" secondItem="QeT-bs-d7o" secondAttribute="trailing" id="KSR-b7-bAy"/>
+                                            <constraint firstAttribute="bottom" secondItem="QeT-bs-d7o" secondAttribute="bottom" id="NI9-jj-Zf5"/>
+                                            <constraint firstItem="QeT-bs-d7o" firstAttribute="top" secondItem="lx5-qY-Smk" secondAttribute="top" id="YC4-hF-tfJ"/>
+                                            <constraint firstAttribute="height" constant="78" id="aay-nu-RJ2"/>
                                         </constraints>
                                     </scrollView>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="em6-p5-0aS" userLabel="curSV">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="em6-p5-0aS" userLabel="curSV">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="382"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="First Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt6-dV-akQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="382"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt6-dV-akQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="tt6-dV-akQ" secondAttribute="bottom" id="1YF-Zy-lKk"/>
+                                            <constraint firstItem="tt6-dV-akQ" firstAttribute="top" secondItem="em6-p5-0aS" secondAttribute="top" id="bUW-06-Gyg"/>
                                             <constraint firstItem="tt6-dV-akQ" firstAttribute="leading" secondItem="em6-p5-0aS" secondAttribute="leading" id="f5r-fb-KjN"/>
+                                            <constraint firstItem="tt6-dV-akQ" firstAttribute="leading" secondItem="em6-p5-0aS" secondAttribute="leading" id="sMO-Hd-AD3"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
@@ -112,12 +120,14 @@
                                     <constraint firstItem="em6-p5-0aS" firstAttribute="trailing" secondItem="lx5-qY-Smk" secondAttribute="trailing" id="61V-j2-O0l"/>
                                     <constraint firstItem="em6-p5-0aS" firstAttribute="top" secondItem="kHr-Nq-fdT" secondAttribute="top" id="6kw-rM-bgO"/>
                                     <constraint firstAttribute="bottom" secondItem="em6-p5-0aS" secondAttribute="bottom" constant="154" id="TJA-CQ-Lxx"/>
+                                    <constraint firstItem="lx5-qY-Smk" firstAttribute="top" secondItem="kHr-Nq-fdT" secondAttribute="top" constant="381" id="V1f-LC-3ou"/>
                                     <constraint firstItem="em6-p5-0aS" firstAttribute="leading" secondItem="lx5-qY-Smk" secondAttribute="leading" id="YAU-8I-miA"/>
                                     <constraint firstAttribute="bottom" secondItem="lx5-qY-Smk" secondAttribute="bottom" constant="77" id="dYb-UU-nxx"/>
                                     <constraint firstItem="em6-p5-0aS" firstAttribute="centerX" secondItem="kHr-Nq-fdT" secondAttribute="centerX" id="hWz-Zh-enm"/>
                                     <constraint firstItem="em6-p5-0aS" firstAttribute="leading" secondItem="kHr-Nq-fdT" secondAttribute="leading" id="k4z-eH-aoK"/>
                                     <constraint firstItem="tVM-Wd-3BW" firstAttribute="top" secondItem="em6-p5-0aS" secondAttribute="bottom" constant="76" id="knr-p1-eew"/>
                                     <constraint firstAttribute="trailing" secondItem="em6-p5-0aS" secondAttribute="trailing" id="kqD-PA-88F"/>
+                                    <constraint firstAttribute="bottom" secondItem="tVM-Wd-3BW" secondAttribute="bottom" id="pXv-9h-Pj9"/>
                                     <constraint firstItem="em6-p5-0aS" firstAttribute="leading" secondItem="tVM-Wd-3BW" secondAttribute="leading" id="txl-Qf-3w3"/>
                                 </constraints>
                             </scrollView>
@@ -137,7 +147,7 @@
                         <outlet property="curSV" destination="em6-p5-0aS" id="eo5-UE-5Ie"/>
                         <outlet property="mainSV" destination="kHr-Nq-fdT" id="Q8X-Vx-5ZE"/>
                         <outlet property="sBottomSV" destination="lx5-qY-Smk" id="she-bn-h0v"/>
-                        <segue destination="KA9-0d-HBY" kind="push" identifier="toSavedMail" id="Z7n-ua-SJq"/>
+                        <segue destination="KA9-0d-HBY" kind="show" identifier="toSavedMail" id="Z7n-ua-SJq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9m-Xo-lb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
