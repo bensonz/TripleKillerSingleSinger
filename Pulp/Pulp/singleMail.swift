@@ -25,4 +25,17 @@ class singleMail {
         self.time = time
     }
     
+    func countLines() -> Int{
+        return 2 + content.count
+    }
+    
+    func allContentInStringFormat() -> String{
+        var s = title + "\n" + "from : " + sender + "    to:" + reciever + "\n"
+        for c in content {
+            s += c
+            s += "\n"
+        }
+        return s
+    }
+    
 }

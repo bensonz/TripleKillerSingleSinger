@@ -9,10 +9,10 @@
         <scene sceneID="CGK-Kp-IV3">
             <objects>
                 <navigationController id="5xz-Ne-em5" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WsX-CS-vaA">
+                    <navigationBar key="navigationBar" opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" id="WsX-CS-vaA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.10048854575136099" green="0.87463909646739135" blue="0.10231277413473469" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.091891001506024098" green="0.19490069653614459" blue="0.026814288403614456" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="bos-b7-Z5l" kind="relationship" relationship="rootViewController" id="WUC-Iw-5AD"/>
@@ -63,6 +63,45 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kHr-Nq-fdT">
                                 <rect key="frame" x="16" y="64" width="568" height="536"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tVM-Wd-3BW" userLabel="bSV">
+                                        <rect key="frame" x="0.0" y="458" width="568" height="78"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="78" id="BCF-Tm-5N4"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lx5-qY-Smk" userLabel="sbSV">
+                                        <rect key="frame" x="0.0" y="381" width="568" height="78"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="78" id="0As-YQ-yG7"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="em6-p5-0aS" userLabel="curSV">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="382"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="382" id="YhQ-SO-r6H"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt6-dV-akQ">
+                                        <rect key="frame" x="8" y="8" width="552" height="365"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="em6-p5-0aS" firstAttribute="trailing" secondItem="tVM-Wd-3BW" secondAttribute="trailing" id="4bb-Sr-uAB"/>
+                                    <constraint firstItem="em6-p5-0aS" firstAttribute="trailing" secondItem="lx5-qY-Smk" secondAttribute="trailing" id="61V-j2-O0l"/>
+                                    <constraint firstItem="em6-p5-0aS" firstAttribute="top" secondItem="kHr-Nq-fdT" secondAttribute="top" id="6kw-rM-bgO"/>
+                                    <constraint firstAttribute="bottom" secondItem="em6-p5-0aS" secondAttribute="bottom" constant="154" id="TJA-CQ-Lxx"/>
+                                    <constraint firstItem="em6-p5-0aS" firstAttribute="leading" secondItem="lx5-qY-Smk" secondAttribute="leading" id="YAU-8I-miA"/>
+                                    <constraint firstAttribute="bottom" secondItem="lx5-qY-Smk" secondAttribute="bottom" constant="77" id="dYb-UU-nxx"/>
+                                    <constraint firstItem="em6-p5-0aS" firstAttribute="centerX" secondItem="kHr-Nq-fdT" secondAttribute="centerX" id="hWz-Zh-enm"/>
+                                    <constraint firstItem="em6-p5-0aS" firstAttribute="leading" secondItem="kHr-Nq-fdT" secondAttribute="leading" id="k4z-eH-aoK"/>
+                                    <constraint firstItem="tVM-Wd-3BW" firstAttribute="top" secondItem="em6-p5-0aS" secondAttribute="bottom" constant="76" id="knr-p1-eew"/>
+                                    <constraint firstAttribute="trailing" secondItem="em6-p5-0aS" secondAttribute="trailing" id="kqD-PA-88F"/>
+                                    <constraint firstItem="em6-p5-0aS" firstAttribute="leading" secondItem="tVM-Wd-3BW" secondAttribute="leading" id="txl-Qf-3w3"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,7 +114,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Inbox" id="WSl-Rx-O1y"/>
                     <connections>
+                        <outlet property="bottomSV" destination="tVM-Wd-3BW" id="8Pc-wK-pYc"/>
+                        <outlet property="curMsg" destination="tt6-dV-akQ" id="KSs-KR-GLW"/>
+                        <outlet property="curSV" destination="em6-p5-0aS" id="eo5-UE-5Ie"/>
                         <outlet property="mainSV" destination="kHr-Nq-fdT" id="Q8X-Vx-5ZE"/>
+                        <outlet property="sBottomSV" destination="lx5-qY-Smk" id="she-bn-h0v"/>
                         <segue destination="KA9-0d-HBY" kind="push" identifier="toSavedMail" id="Z7n-ua-SJq"/>
                     </connections>
                 </viewController>
