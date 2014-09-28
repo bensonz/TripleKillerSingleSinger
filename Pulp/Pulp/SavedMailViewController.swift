@@ -9,15 +9,23 @@
 import UIKit
 
 class SavedMailViewController : UICollectionViewController,UICollectionViewDelegate,UICollectionViewDataSource{
-    
+
+    var swipeRight = UISwipeGestureRecognizer()
     var mails : [singleMail]?
     
     override func viewDidLoad() {
-        
+        self.swipeRight.direction = .Right
+        self.view.addGestureRecognizer(swipeRight)
+        self.swipeRight.addTarget(self,action : "swippedRight")
+
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
         self.collectionView?.registerNib(UINib(nibName: "PBCell", bundle: NSBundle.mainBundle()), forCellWithReuseIdentifier: "singleMsgCell")
+    }
+    
+    func swippedRight(){
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,6 +41,17 @@ class SavedMailViewController : UICollectionViewController,UICollectionViewDeleg
         
         for indexPath in collectionView.indexPathsForSelectedItems(){
             collectionView.deselectItemAtIndexPath(indexPath as? NSIndexPath, animated: true)
+            
+//            var anim : POPBasicAnimation = animationWithPropertyNamed;:kPOPViewAlpha;
+            
+            
+//            translate to swift
+//            POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
+//            anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+//            anim.fromValue = @(0.0);
+//            anim.toValue = @(1.0);
+//            [view pop_addAnimation:anim forKey:@"fade"];
+
             self.collectionView(collectionView, didDeselectItemAtIndexPath: indexPath as NSIndexPath)
             shouldSelect = false
         }
