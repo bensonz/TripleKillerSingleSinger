@@ -8,8 +8,8 @@
 
 import UIKit
 
-class InboxViewController: UIViewController {
-
+class InboxViewController: UIViewController, UIScrollViewDelegate {
+    
     @IBOutlet weak var mainSV: UIScrollView!
     
     @IBOutlet weak var bottomSV : UIScrollView!
@@ -20,9 +20,15 @@ class InboxViewController: UIViewController {
     
     var mails : [singleMail]?
     var swipeLeft = UISwipeGestureRecognizer()
-    
     let mailHeight: CGFloat = 200.0
     let OffsetSpeed: CGFloat = 25.0
+    
+    
+    //initalize delegate
+    var sc_delegate = scrollViewClass()
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,20 +39,27 @@ class InboxViewController: UIViewController {
         self.swipeLeft.direction = .Left
         self.mainSV.addGestureRecognizer(swipeLeft)
         self.swipeLeft.addTarget(self,action : "swippedLeft")
-        mainSV.layer.borderWidth = 0.5
-        mainSV.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 0.5, 0.5, 0.2])
         
-        bottomSV.layer.borderWidth = 0.3
-        bottomSV.backgroundColor = UIColor.whiteColor()
-
-        sBottomSV.layer.borderWidth = 0.3
-        sBottomSV.backgroundColor = UIColor.whiteColor()
-    
-        curSV.layer.borderWidth = 0.3
-        curSV.backgroundColor = UIColor.whiteColor()
+        //        //code for Borders
+        //        mainSV.layer.borderWidth = 0.5
+        //        mainSV.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 0.5, 0.5, 0.2])
+        //        bottomSV.layer.borderWidth = 0.3
+        //        bottomSV.backgroundColor = UIColor.whiteColor()
+        //        sBottomSV.layer.borderWidth = 0.3
+        //        sBottomSV.backgroundColor = UIColor.whiteColor()
+        //        curSV.layer.borderWidth = 0.3
+        //        curSV.backgroundColor = UIColor.whiteColor()
+        //        curMsg.numberOfLines = mails![0].countLines()
+        //        curMsg.text = mails![0].allContentInStringFormat()
+        //
+        //code for scrolling
+        self.curSV.delegate = sc_delegate
+        sc_delegate.scrollViews.append(bottomSV)
+        sc_delegate.scrollViews.append(sBottomSV)
         
-        curMsg.numberOfLines = mails![0].countLines()
-        curMsg.text = mails![0].allContentInStringFormat()
+        //we have to make scroll view size bigger than displayed size
+        curSV.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height + 100)
+        
     }
     
     
@@ -58,13 +71,13 @@ class InboxViewController: UIViewController {
             alpha: CGFloat(alp)
         )
     }
-
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func swippedLeft(){
         self.performSegueWithIdentifier("toSavedMail", sender: self)
     }
@@ -74,8 +87,8 @@ class InboxViewController: UIViewController {
         switch segue.identifier {
         case "toSavedMail":
             if var dest = segue.destinationViewController as? SavedMailViewController {
-                    dest.mails = self.mails
-                }
+                dest.mails = self.mails
+            }
         default:
             println("GG. wtf")
             break
@@ -100,7 +113,7 @@ class InboxViewController: UIViewController {
             self.mails!.append(singleMail(title: String(i), sender: String(i) + "@apple.com", reciever: "me", content: ccc, time: String(i)))
         }
     }
-
-
+    
+    
 }
 

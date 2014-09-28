@@ -15,6 +15,7 @@
 		2271CF3919D769C400D47CDB /* PulpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271CF3819D769C400D47CDB /* PulpTests.swift */; };
 		2271CF4419D76A9400D47CDB /* SavedMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */; };
 		2274AA5319D775B500AEB124 /* singleMail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274AA5219D775B500AEB124 /* singleMail.swift */; };
+		A90854DB19D7D78800087FFC /* scrollViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90854DA19D7D78800087FFC /* scrollViewClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		2271CF3819D769C400D47CDB /* PulpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulpTests.swift; sourceTree = "<group>"; };
 		2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedMailViewController.swift; sourceTree = "<group>"; };
 		2274AA5219D775B500AEB124 /* singleMail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = singleMail.swift; sourceTree = "<group>"; };
+		A90854DA19D7D78800087FFC /* scrollViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = scrollViewClass.swift; path = ../../../../../../Downloads/Pulp/Pulp/scrollViewClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		2271CF4219D76A7E00D47CDB /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A90854DA19D7D78800087FFC /* scrollViewClass.swift */,
 				2271CF2419D769C400D47CDB /* InboxViewController.swift */,
 				2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */,
 			);
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2274AA5319D775B500AEB124 /* singleMail.swift in Sources */,
+				A90854DB19D7D78800087FFC /* scrollViewClass.swift in Sources */,
 				2271CF2519D769C400D47CDB /* InboxViewController.swift in Sources */,
 				2271CF4419D76A9400D47CDB /* SavedMailViewController.swift in Sources */,
 				2271CF2319D769C400D47CDB /* AppDelegate.swift in Sources */,
