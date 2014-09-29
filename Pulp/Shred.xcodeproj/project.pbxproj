@@ -46,14 +46,14 @@
 		2252D7AC19D8ABAA001BD59D /* PBCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBCell.xib; sourceTree = SOURCE_ROOT; };
 		226D43BB19D81BE100850A69 /* 2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2@2x.jpg"; sourceTree = SOURCE_ROOT; };
 		226D43BE19D81C6400850A69 /* customPBLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customPBLayout.swift; sourceTree = "<group>"; };
-		2271CF1D19D769C400D47CDB /* Pulp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pulp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2271CF1D19D769C400D47CDB /* Shred.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shred.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2271CF2119D769C400D47CDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2271CF2219D769C400D47CDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2271CF2419D769C400D47CDB /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
 		2271CF2719D769C400D47CDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2271CF2919D769C400D47CDB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2271CF2C19D769C400D47CDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2271CF3219D769C400D47CDB /* PulpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2271CF3219D769C400D47CDB /* ShredTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShredTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2271CF3719D769C400D47CDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2271CF3819D769C400D47CDB /* PulpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulpTests.swift; sourceTree = "<group>"; };
 		2271CF4319D76A9400D47CDB /* SavedMailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedMailViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 		2271CF1E19D769C400D47CDB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2271CF1D19D769C400D47CDB /* Pulp.app */,
-				2271CF3219D769C400D47CDB /* PulpTests.xctest */,
+				2271CF1D19D769C400D47CDB /* Shred.app */,
+				2271CF3219D769C400D47CDB /* ShredTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,9 +211,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2271CF1C19D769C400D47CDB /* Pulp */ = {
+		2271CF1C19D769C400D47CDB /* Shred */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2271CF3C19D769C400D47CDB /* Build configuration list for PBXNativeTarget "Pulp" */;
+			buildConfigurationList = 2271CF3C19D769C400D47CDB /* Build configuration list for PBXNativeTarget "Shred" */;
 			buildPhases = (
 				EBEBF31CDA3C2B72964D6B3B /* Check Pods Manifest.lock */,
 				2271CF1919D769C400D47CDB /* Sources */,
@@ -225,14 +225,14 @@
 			);
 			dependencies = (
 			);
-			name = Pulp;
+			name = Shred;
 			productName = Pulp;
-			productReference = 2271CF1D19D769C400D47CDB /* Pulp.app */;
+			productReference = 2271CF1D19D769C400D47CDB /* Shred.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2271CF3119D769C400D47CDB /* PulpTests */ = {
+		2271CF3119D769C400D47CDB /* ShredTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2271CF3F19D769C400D47CDB /* Build configuration list for PBXNativeTarget "PulpTests" */;
+			buildConfigurationList = 2271CF3F19D769C400D47CDB /* Build configuration list for PBXNativeTarget "ShredTests" */;
 			buildPhases = (
 				2271CF2E19D769C400D47CDB /* Sources */,
 				2271CF2F19D769C400D47CDB /* Frameworks */,
@@ -243,9 +243,9 @@
 			dependencies = (
 				2271CF3419D769C400D47CDB /* PBXTargetDependency */,
 			);
-			name = PulpTests;
+			name = ShredTests;
 			productName = PulpTests;
-			productReference = 2271CF3219D769C400D47CDB /* PulpTests.xctest */;
+			productReference = 2271CF3219D769C400D47CDB /* ShredTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +266,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2271CF1819D769C400D47CDB /* Build configuration list for PBXProject "Pulp" */;
+			buildConfigurationList = 2271CF1819D769C400D47CDB /* Build configuration list for PBXProject "Shred" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -279,8 +279,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2271CF1C19D769C400D47CDB /* Pulp */,
-				2271CF3119D769C400D47CDB /* PulpTests */,
+				2271CF1C19D769C400D47CDB /* Shred */,
+				2271CF3119D769C400D47CDB /* ShredTests */,
 			);
 		};
 /* End PBXProject section */
@@ -374,7 +374,7 @@
 /* Begin PBXTargetDependency section */
 		2271CF3419D769C400D47CDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2271CF1C19D769C400D47CDB /* Pulp */;
+			target = 2271CF1C19D769C400D47CDB /* Shred */;
 			targetProxy = 2271CF3319D769C400D47CDB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -483,7 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pulp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Shred;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -495,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pulp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Shred;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -514,7 +514,7 @@
 				);
 				INFOPLIST_FILE = PulpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ShredTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pulp.app/Pulp";
 			};
 			name = Debug;
@@ -529,7 +529,7 @@
 				);
 				INFOPLIST_FILE = PulpTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ShredTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pulp.app/Pulp";
 			};
 			name = Release;
@@ -537,7 +537,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2271CF1819D769C400D47CDB /* Build configuration list for PBXProject "Pulp" */ = {
+		2271CF1819D769C400D47CDB /* Build configuration list for PBXProject "Shred" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2271CF3A19D769C400D47CDB /* Debug */,
@@ -546,7 +546,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2271CF3C19D769C400D47CDB /* Build configuration list for PBXNativeTarget "Pulp" */ = {
+		2271CF3C19D769C400D47CDB /* Build configuration list for PBXNativeTarget "Shred" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2271CF3D19D769C400D47CDB /* Debug */,
@@ -555,7 +555,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2271CF3F19D769C400D47CDB /* Build configuration list for PBXNativeTarget "PulpTests" */ = {
+		2271CF3F19D769C400D47CDB /* Build configuration list for PBXNativeTarget "ShredTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2271CF4019D769C400D47CDB /* Debug */,
