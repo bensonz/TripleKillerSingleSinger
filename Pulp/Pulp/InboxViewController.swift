@@ -8,18 +8,12 @@
 
 import UIKit
 
-class InboxViewController: UIViewController, UIScrollViewDelegate {
+class InboxViewController: UICollectionViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     
-    @IBOutlet weak var mainSV: UIScrollView!
-    
-    @IBOutlet weak var bottomSV : UIScrollView!
-    @IBOutlet weak var sBottomSV : UIScrollView!
-    @IBOutlet weak var curSV : UIScrollView!
-    
-    @IBOutlet weak var curMsg: UILabel!
     
     var mails : [singleMail]?
     var swipeLeft = UISwipeGestureRecognizer()
+    
     let mailHeight: CGFloat = 200.0
     let OffsetSpeed: CGFloat = 25.0
     
@@ -31,36 +25,13 @@ class InboxViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        generateRandomeMail()
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        self.view.backgroundColor = UIColor.clearColor()
-        
-        /*Gesture recognizer in mainsv*/
         self.swipeLeft.direction = .Left
-        self.mainSV.addGestureRecognizer(swipeLeft)
+        self.view.addGestureRecognizer(swipeLeft)
         self.swipeLeft.addTarget(self,action : "swippedLeft")
         
-        //        //code for Borders
-        //        mainSV.layer.borderWidth = 0.5
-        //        mainSV.layer.borderColor = CGColorCreate(CGColorSpaceCreateDeviceRGB(), [1.0, 0.5, 0.5, 0.2])
-        //        bottomSV.layer.borderWidth = 0.3
-        //        bottomSV.backgroundColor = UIColor.whiteColor()
-        //        sBottomSV.layer.borderWidth = 0.3
-        //        sBottomSV.backgroundColor = UIColor.whiteColor()
-        //        curSV.layer.borderWidth = 0.3
-        //        curSV.backgroundColor = UIColor.whiteColor()
-        //        curMsg.numberOfLines = mails![0].countLines()
-        //        curMsg.text = mails![0].allContentInStringFormat()
-        //
-        //code for scrolling
-        /*
-        self.curSV.delegate = sc_delegate
-        sc_delegate.scrollViews.append(bottomSV)
-        sc_delegate.scrollViews.append(sBottomSV)
-        */
-        //we have to make scroll view size bigger than displayed size
-        curSV.contentSize = CGSizeMake(self.view.frame.width, self.view.frame.height + 100)
-        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        self.collectionView?.backgroundColor = UIColor.clearColor()
+        self.collectionView?.registerNib(UINib(nibName: "PBCell", bundle: NSBundle.mainBundle()), forCellWithReuseIdentifier: "singleMsgCell")
     }
     
     
@@ -88,7 +59,7 @@ class InboxViewController: UIViewController, UIScrollViewDelegate {
         switch segue.identifier {
         case "toSavedMail":
             if var dest = segue.destinationViewController as? SavedMailViewController {
-                dest.mails = self.mails
+                break
             }
         default:
             println("GG. wtf")
@@ -100,21 +71,82 @@ class InboxViewController: UIViewController, UIScrollViewDelegate {
         if segue.identifier == "toSavedMail" {
             println("unwind!!")
         }
+    }
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 200
+    }
+    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        var shouldSelect = true
+        
+        for indexPath in collectionView.indexPathsForSelectedItems(){
+            collectionView.deselectItemAtIndexPath(indexPath as? NSIndexPath, animated: true)
+            
+            //            var anim : POPBasicAnimation = animationWithPropertyNamed;:kPOPViewAlpha;
+            
+            
+            //            translate to swift
+            //            POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
+            //            anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+            //            anim.fromValue = @(0.0);
+            //            anim.toValue = @(1.0);
+            //            [view pop_addAnimation:anim forKey:@"fade"];
+            
+            self.collectionView(collectionView, didDeselectItemAtIndexPath: indexPath as NSIndexPath)
+            shouldSelect = false
+        }
+        return shouldSelect
+    }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        var topPoint = CGPointMake(0, 0)
+        var indexPathCurrentCell = self.collectionView?.indexPathForItemAtPoint(topPoint)
+    }
+    
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        var cell : PassCell = collectionView.dequeueReusableCellWithReuseIdentifier("singleMsgCell", forIndexPath: indexPath) as PassCell
+        cell.backgroundColor = UIColor.whiteColor()
+        cell.layer.cornerRadius = 5
+        
+        var shadowPath : UIBezierPath = UIBezierPath(rect: cell.bounds)
+        cell.layer.masksToBounds = false
+        cell.layer.shadowColor = UIColor.blackColor().CGColor
+        cell.layer.shadowOffset = CGSizeMake(0.0, 1.0)
+        cell.layer.shadowOpacity = 0.5
+        cell.layer.shadowPath = shadowPath.CGPath
+        
+        
+        //        UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:view.bounds];
+        //        view.layer.masksToBounds = NO;
+        //        view.layer.shadowColor = [UIColor blackColor].CGColor;
+        //        view.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
+        //        view.layer.shadowOpacity = 0.5f;
+        //        view.layer.shadowPath = shadowPath.CGPath;
+        
+        cell.setStyle(indexPath.item % 3)
+        let sView = UIView(frame: cell.frame)
+        makeMailCell("BENSON", "September 22", "Testing", "message-01", sView)
+        
+        cell.addSubview(sView)
+        return cell
+    }
+    
+    func fn()->Void{
         
     }
     
-    func generateRandomeMail(){
-        if (mails == nil){
-            mails = []
-        }
-        for var i = 0; i < 10; ++i {
-            var ccc = ["hello","my friends","yall look great","i have a dream","help me",
-                "help urself","be cool","pce out","making it long","wut","guess","haha","just long","jsut mad long","i done caring","hell yeah","hello","my friends","yall look great","i have a dream","help me",
-                "help urself","be cool","pce out","making it long","wut","guess","haha","just long","jsut mad long","i done caring","hell yeah"]
-            self.mails!.append(singleMail(title: String(i), sender: String(i) + "@apple.com", reciever: "me", content: ccc, time: String(i)))
-        }
+    override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) -> Void {
+        collectionView.performBatchUpdates(fn, completion: nil)
+        collectionView.scrollEnabled = true
+        
     }
     
-    
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) -> Void {
+        collectionView.performBatchUpdates(fn, completion: nil)
+        collectionView.scrollEnabled = false
+    }
+
 }
 

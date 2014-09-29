@@ -51,7 +51,7 @@ class customPBLayout : UICollectionViewLayout{
     
     override init() {
         var n : PassMetrics = PassMetrics(size: CGSizeMake(320.0, 420.0), overlap: 0.0)
-        var collap: PassMetrics = PassMetrics(size : CGSizeMake(320.0, 96.0), overlap: 32.0)
+        var collap: PassMetrics = PassMetrics(size : CGSizeMake(320.0, 112.0), overlap: 32.0)
         
         metrics = PassbookLayoutMetrics(normal: n, collapsed: collap, bottomStackedTotalHeight: 32.0, bottomStackedHeight: 8.0)
         
