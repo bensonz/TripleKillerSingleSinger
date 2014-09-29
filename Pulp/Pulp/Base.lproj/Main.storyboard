@@ -8,6 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CGK-Kp-IV3">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyP-cy-7AW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="5xz-Ne-em5" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" alpha="0.84999999999999987" contentMode="scaleToFill" id="WsX-CS-vaA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -18,11 +19,10 @@
                         <segue destination="bos-b7-Z5l" kind="relationship" relationship="rootViewController" id="WUC-Iw-5AD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qyP-cy-7AW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1324" y="881"/>
+            <point key="canvasLocation" x="-1239" y="593"/>
         </scene>
-        <!--Saved mails-->
+        <!--Saved Mail View Controller-->
         <scene sceneID="pwZ-eR-CJY">
             <objects>
                 <viewController id="KA9-0d-HBY" customClass="SavedMailViewController" customModule="Pulp" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,13 +41,12 @@
                             <outlet property="delegate" destination="KA9-0d-HBY" id="uUQ-1W-NWH"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Saved mails" id="fc1-XF-gZo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OmF-lG-cAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="304" y="593"/>
         </scene>
-        <!--Inbox-->
+        <!--Inbox View Controller-->
         <scene sceneID="Fnd-io-Jtu">
             <objects>
                 <viewController id="bos-b7-Z5l" customClass="InboxViewController" customModule="Pulp" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,7 +139,7 @@
                             <constraint firstItem="kHr-Nq-fdT" firstAttribute="leading" secondItem="2X6-us-Bvz" secondAttribute="leadingMargin" id="zMu-Os-08s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Inbox" id="WSl-Rx-O1y"/>
+                    <navigationItem key="navigationItem" id="WSl-Rx-O1y"/>
                     <connections>
                         <outlet property="bottomSV" destination="tVM-Wd-3BW" id="8Pc-wK-pYc"/>
                         <outlet property="curMsg" destination="tt6-dV-akQ" id="KSs-KR-GLW"/>
@@ -152,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F9m-Xo-lb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-513" y="881"/>
+            <point key="canvasLocation" x="-466" y="593"/>
         </scene>
     </scenes>
 </document>
