@@ -88,7 +88,9 @@ class SavedMailViewController : UICollectionViewController,UICollectionViewDeleg
         
         cell.setStyle(indexPath.item % 3)
         let sView = UIView(frame: cell.frame)
-        makeMailCell("Kevin", "September 14", "This is a test", "message-03", sView)
+        //makeMailCell("BENSON", "September 22", "Testing", "message-01", sView)
+        var insideView : String = "message-0\(indexPath.item%3+1)"
+        makeMailCell("Kevin", "September 14", "This is saved mails", insideView, sView)
         cell.addSubview(sView)
         return cell
     }
