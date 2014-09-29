@@ -24,7 +24,21 @@ class mailContent {
     }
 }
 
+var allMessages: [mailContent] = []
 var savedMessages: [mailContent] = []
 var archivedMessages: [mailContent] = []
 var unreadMessages: [mailContent] = []
+
+func refreshMail() {
+    for message in allMessages {
+        if message.box == "archived" {
+            archivedMessages.append(message)
+        } else if message.box == "saved" {
+            savedMessages.append(message)
+        } else if message.box == "unread" {
+            unreadMessages.append(message)
+        }
+            
+    }
+}
 
