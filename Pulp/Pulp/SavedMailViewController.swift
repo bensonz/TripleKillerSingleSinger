@@ -62,7 +62,6 @@ class SavedMailViewController : UICollectionViewController,UICollectionViewDeleg
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         var topPoint = CGPointMake(0, 0)
         var indexPathCurrentCell = self.collectionView?.indexPathForItemAtPoint(topPoint)
-        println(indexPathCurrentCell)
     }
     
     
