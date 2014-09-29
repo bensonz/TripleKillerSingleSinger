@@ -33,6 +33,7 @@ class InboxViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         generateRandomeMail()
         navigationController?.setNavigationBarHidden(true, animated: false)
+        self.view.backgroundColor = UIColor.clearColor()
         
         /*Gesture recognizer in mainsv*/
         self.swipeLeft.direction = .Left
