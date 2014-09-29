@@ -82,6 +82,9 @@ class SavedMailViewController : UICollectionViewController,UICollectionViewDeleg
 //        view.layer.shadowPath = shadowPath.CGPath;
         
         cell.setStyle(indexPath.item % 3)
+        let sV = UIView(frame: cell.frame)
+        makeMailCell("Kevin", "September 14", "This is a test", "message-03", sV)
+        cell.addSubview(sV)
         return cell
     }
     
