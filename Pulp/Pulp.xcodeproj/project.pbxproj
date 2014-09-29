@@ -25,6 +25,7 @@
 		3D588CF819D8D5F7009F68A2 /* FuturaStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D588CF519D8D59B009F68A2 /* FuturaStd-Book.otf */; };
 		3D588CF919D8D5F9009F68A2 /* FuturaStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3D588CF419D8D59B009F68A2 /* FuturaStd-Bold.otf */; };
 		3D588CFA19D8D5FB009F68A2 /* Sabon-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D588CF619D8D59B009F68A2 /* Sabon-Roman.ttf */; };
+		3DE51D3119D8E14400EB09FB /* HTMLContent in Resources */ = {isa = PBXBuildFile; fileRef = 3DE51D3019D8E14400EB09FB /* HTMLContent */; };
 		4D54B8B332972699BE6E20A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8CE0E0981807D6FDC7A77F /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		3D588CF419D8D59B009F68A2 /* FuturaStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Bold.otf"; sourceTree = "<group>"; };
 		3D588CF519D8D59B009F68A2 /* FuturaStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Book.otf"; sourceTree = "<group>"; };
 		3D588CF619D8D59B009F68A2 /* Sabon-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sabon-Roman.ttf"; sourceTree = "<group>"; };
+		3DE51D3019D8E14400EB09FB /* HTMLContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTMLContent; sourceTree = "<group>"; };
 		77BFEF5C7C103775B61D0F81 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CF8CE0E0981807D6FDC7A77F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E56E489785654AAECAD7E747 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		2271CF2019D769C400D47CDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3DE51D3019D8E14400EB09FB /* HTMLContent */,
 				3D588CF719D8D5AB009F68A2 /* Fonts */,
 				2271CF2119D769C400D47CDB /* Info.plist */,
 			);
@@ -295,6 +298,7 @@
 				2252D7AB19D8A2A0001BD59D /* 3@2x.jpg in Resources */,
 				2252D7AA19D8A2A0001BD59D /* 1@2x.jpg in Resources */,
 				2271CF2A19D769C400D47CDB /* Images.xcassets in Resources */,
+				3DE51D3119D8E14400EB09FB /* HTMLContent in Resources */,
 				3D588CFA19D8D5FB009F68A2 /* Sabon-Roman.ttf in Resources */,
 				226D43BC19D81BE100850A69 /* 2@2x.jpg in Resources */,
 			);
