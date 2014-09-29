@@ -53,7 +53,7 @@ class customPBLayout : UICollectionViewLayout{
         var n : PassMetrics = PassMetrics(size: CGSizeMake(320.0, 420.0), overlap: 0.0)
         var collap: PassMetrics = PassMetrics(size : CGSizeMake(320.0, 96.0), overlap: 32.0)
         
-        metrics = PassbookLayoutMetrics(normal: n, collapsed: collap, bottomStackedTotalHeight: 8.0, bottomStackedHeight: 32.0)
+        metrics = PassbookLayoutMetrics(normal: n, collapsed: collap, bottomStackedTotalHeight: 32.0, bottomStackedHeight: 8.0)
         
         effects = PassbookLayoutEffects(inheritance: 0.20, bouncesTop: true, sticksTop: true)
         super.init()
@@ -63,7 +63,7 @@ class customPBLayout : UICollectionViewLayout{
         var n : PassMetrics = PassMetrics(size: CGSizeMake(320.0, 420.0), overlap: 0.0)
         var collap: PassMetrics = PassMetrics(size : CGSizeMake(320.0, 96.0), overlap: 32.0)
         
-        metrics = PassbookLayoutMetrics(normal: n, collapsed: collap, bottomStackedTotalHeight: 8.0, bottomStackedHeight: 32.0)
+        metrics = PassbookLayoutMetrics(normal: n, collapsed: collap, bottomStackedTotalHeight: 32.0, bottomStackedHeight: 8.0)
         effects = PassbookLayoutEffects(inheritance: 0.20, bouncesTop: true, sticksTop: true)
         super.init(coder: aDecoder)
     }
@@ -109,6 +109,7 @@ class customPBLayout : UICollectionViewLayout{
         var minint = Int(min);
         var maxint = Int(max);
         
+        maxint = (maxint > count) ? count : maxint;
         minint = (minint < 0)     ? 0   : minint;
         minint = (minint < maxint)   ? minint : maxint;
         
@@ -130,7 +131,7 @@ class customPBLayout : UICollectionViewLayout{
     func frameForPassAtIndex(indexPath : NSIndexPath,isLastCell : Bool,b : CGRect,
         m : PassbookLayoutMetrics , e: PassbookLayoutEffects) -> CGRect
     {
-        println("pass cell created")
+        //println("pass cell created")
         var f : CGRect =  CGRect()
         f.origin.x = (b.size.width - m.normal.size.width) / 2.0;
         f.origin.y = CGFloat(indexPath.item) * (m.collapsed.size.height - m.collapsed.overlap);
